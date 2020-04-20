@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--弧度-->
+    <corners android:radius="20dp"/>
+
+    <!--填充，透明度设置-->
+    <solid android:color="@color/color_black_40"/>
+
+    <!--<padding
+        android:bottom="5dp"
+        android:top="25dp"
+        android:right="25dp"/>-->
+
+    <!--边线-->
+    <stroke
+        android:width="1dp"
+        android:color="@color/color_ffffff"/>
+
+</shape>

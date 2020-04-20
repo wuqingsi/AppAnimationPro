@@ -11,4 +11,11 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+
+    <!--把控件属性放到style文件中，方便属性复用-->
+    <style name="video_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
 </resources>
