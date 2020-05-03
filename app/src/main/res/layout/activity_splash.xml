@@ -4,10 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<com.wqs.appanimationpro.FullScreenVideoView
-    android:id="@+id/vv_play"
-    style="@style/video_view_style" />
+    <!--splash视图-->
+    <com.wqs.appanimationpro.FullScreenVideoView
+        android:id="@+id/vv_play"
+        style="@style/video_view_style" />
 
+    <!--倒计时动画视图-->
     <TextView
         android:id="@+id/tv_splash_timer"
         android:textSize="20dp"

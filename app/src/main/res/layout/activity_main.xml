@@ -1,19 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Hello world!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- layout_alignParentBottom="true" 控件放置底部  -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fl_main_bottom"
+        android:layout_marginBottom="0dp">
+
+
+        <!--悬浮按钮-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fac_main_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_40" />
+
+    </FrameLayout>
+
+    <FrameLayout
+       android:id="@+id/fl_main_bottom"
+       android:layout_alignParentBottom="true"
+       android:background="@color/color_black_40"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dp_50">
+
+        <RadioGroup
+            android:id="@+id/rg_main_top"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rb_main_shanghai"
+                android:text="@string/str_name_shanghai"
+                style="@style/main_tab_rb_style" />
+            <RadioButton
+                android:id="@+id/rb_main_hangzhou"
+                android:text="@string/str_name_hanghzou"
+                style="@style/main_tab_rb_style"/>
+            <RadioButton
+                android:id="@+id/rb_main_wuxi"
+                android:text="@string/str_name_wuxi"
+                style="@style/main_tab_rb_style"/>
+
+
+        </RadioGroup>
+
+</FrameLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

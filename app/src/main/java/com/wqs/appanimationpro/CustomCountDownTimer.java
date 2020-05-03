@@ -51,7 +51,7 @@ public class CustomCountDownTimer implements Runnable {
         isRun = false;
         handler.removeCallbacks(this);
     }
-    //回调接口
+    //回调接口 IOC控制反转
     public interface ICountDownHandler{
         void onTicker(int time);
         void onFinish();

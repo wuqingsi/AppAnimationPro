@@ -52,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        timer = new CustomCountDownTimer(5, new CustomCountDownTimer.ICountDownHandler() {
+        timer = new CustomCountDownTimer(3, new CustomCountDownTimer.ICountDownHandler() {
             @Override
             public void onTicker(int time) {
                 mTvTimer.setText(time + "秒");
@@ -60,7 +60,8 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                mTvTimer.setText("跳过");
+                //mTvTimer.setText("跳过");
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
             }
         });
         timer.start();
